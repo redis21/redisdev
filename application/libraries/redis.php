@@ -9,7 +9,7 @@ class Redis{
     'scheme' 	=> 'tcp',
     'host'   	=> 'localhost',
     'port'   	=> 6379,
-    'database'	=> 1
+    'database'	=> 0
 ]);
 	return $client;
 	}

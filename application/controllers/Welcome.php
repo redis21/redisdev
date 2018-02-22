@@ -107,8 +107,38 @@ public function lushp(){
 public function zzz(){
 	
 	$arList = $this->redis->hget("user124",'name'); 
+	if (empty($arList)){
+		echo "aaa";
+	}else{
+		echo "bbb";
+	}
 	print_r($arList);
 
+
+}
+//union
+public function sinter(){
+	$arList = $this->redis->SINTER('myset' ,'myex'); 
+	print_r($arList);
+
+}
+//unionall
+//
+//
+//
+public function SADD(){
+	$arList = $this->redis->SISMEMBER('myset' ,'data1'); 
+	print_r($arList);
+	if ($arList==1){
+		echo "a";
+	}else{
+		echo "b";
+	}
+
+}
+public function sunion(){
+	$arList = $this->redis->SUNION('myset' ,'myex'); 
+	print_r($arList);
 
 }
 public function viewAll(){
